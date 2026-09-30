@@ -19,3 +19,7 @@ The `npm test` command is configured to run `make test` via the npm scripts in `
 - `make watch` - Start the webpack dev server
 
 If you need to run tests, you may need to add a test target to the Makefile or run your test command directly.
+
+## Pull Requests
+
+Keep pull requests focused on one change.
