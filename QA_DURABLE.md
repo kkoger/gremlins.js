@@ -8,10 +8,10 @@ The project uses npm for dependency management. The `package.json` defines the f
 
 To install dependencies, run:
 ```bash
-npm ci
+npm install
 ```
 
-This will install the exact versions specified in package-lock.json (if available) or package.json.
+This will install the dependencies specified in package.json.
 
 ## Verification
 
@@ -21,3 +21,5 @@ The `npm test` script in package.json maps to `make test`. However, inspecting t
 - `build`: Builds the project with webpack in production mode
 
 The `test` target referenced by `npm test` does not exist in the Makefile, which means running `npm test` will fail unless a `test` target is added to the Makefile.
+
+Reconnect verification completed.
