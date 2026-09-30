@@ -17,6 +17,38 @@ Gremlins.js simulates random user actions: gremlins click anywhere in the window
 
 This practice, also known as [Monkey testing](http://en.wikipedia.org/wiki/Monkey_test) or [Fuzz testing](http://en.wikipedia.org/wiki/Fuzz_testing), is very common in mobile application development (see for instance the [Android Monkey program](http://developer.android.com/tools/help/monkey.html)). Now that frontend (MV*, d3.js, Backbone.js, Angular.js, etc.) and backend (Node.js) development use persistent JavaScript applications, this technique becomes valuable for web applications.
 
+## How It Works
+
+**gremlins.js** is a monkey testing library that stress-tests web applications by simulating random, disruptive user actions.
+
+### Core Mechanism
+
+1. **Create a horde** – You instantiate a group of "gremlins" (automated agents) and "mogwais" (monitors):
+   ```js
+   var horde = gremlins.createHorde();
+   horde.unleash();
+   ```
+
+2. **Gremlins perform random actions** – Different gremlin species act on your application:
+   - **Clicker** – clicks random elements on the page
+   - **Form Filler** – enters random data into form fields
+   - **Scroller** – scrolls the viewport
+   - **Typer** – types random keyboard input
+   - **Toucher** – simulates touch events
+   
+   These actions repeat at ~10ms intervals, 1000 times by default.
+
+3. **Mogwais monitor for problems** – Harmless observers that track application health:
+   - **FPS mogwai** – logs frame rate; alerts if it drops below 10 FPS
+   - **Alert mogwai** – prevents alert() calls from blocking the test
+   - **Gizmo mogwai** – stops the test after 10 errors are detected
+
+4. **Visual feedback** – Gremlins leave red traces on screen and log their actions to the console.
+
+### Goal
+
+The goal is to find bugs before users do. If gremlins can't break your app through random interactions, it's robust enough for production. Everything is configurable—you can customize which gremlins/mogwais run, their behavior, and add custom ones.
+
 ## Basic Usage
 
 A gremlins *horde* is an army of specialized gremlins ready to mess up your application. *unleash* the gremlins to start the stress test:
