@@ -107,6 +107,22 @@ require(['gremlins'], function(gremlins) {
 
 `gremlins.js` is also available as a **bookmarklet**. Go to [this page](https://rawgithub.com/marmelab/gremlins.js/master/bookmarklet.html), grab it, and unleash hordes on any web page.
 
+## Running the tests
+
+To run the test suite, use the npm test command:
+
+```bash
+npm test
+```
+
+This will execute the test target defined in the Makefile. You can also build the library using:
+
+```bash
+make build
+```
+
+For development, use `make watch` to automatically rebuild the library as you make changes.
+
 ## Advanced Usage
 
 ### Setting Gremlins and Mogwais To Use In A Test
