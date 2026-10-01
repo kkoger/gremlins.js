@@ -77,6 +77,7 @@ horde.gremlin(function() {
 ```
 
 When documenting a custom gremlin, include a short comment describing its intended DOM target.
+Document whether a custom gremlin acts on the focused element or a selected element.
 
 Check the [examples](examples) directory for examples.
 
