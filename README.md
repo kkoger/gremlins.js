@@ -76,6 +76,8 @@ horde.gremlin(function() {
 });
 ```
 
+When documenting a custom gremlin, include a short comment describing its intended DOM target.
+
 Check the [examples](examples) directory for examples.
 
 Everything in `gremlins.js` is configurable ; you will find it very easy to extend and adapt to you use cases.
