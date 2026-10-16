@@ -17,6 +17,8 @@ Gremlins.js simulates random user actions: gremlins click anywhere in the window
 
 This practice, also known as [Monkey testing](http://en.wikipedia.org/wiki/Monkey_test) or [Fuzz testing](http://en.wikipedia.org/wiki/Fuzz_testing), is very common in mobile application development (see for instance the [Android Monkey program](http://developer.android.com/tools/help/monkey.html)). Now that frontend (MV*, d3.js, Backbone.js, Angular.js, etc.) and backend (Node.js) development use persistent JavaScript applications, this technique becomes valuable for web applications.
 
+⚠️ **Warning**: Always test gremlins.js on a disposable local test page—never on a production page or any environment with real users.
+
 ## Basic Usage
 
 A gremlins *horde* is an army of specialized gremlins ready to mess up your application. *unleash* the gremlins to start the stress test:
